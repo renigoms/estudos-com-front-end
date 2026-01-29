@@ -17,6 +17,20 @@
         type="image/png">
         <img src="imagens/foto-g.png" alt="Imagem flexivel">
     </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <h2>Vamos aprender a reproduzir áudios em HTML5.</h2>
+    <p>Paradise City - Guns N Roses</p>
+    <audio src="../media/GunsNRoses-ParadiseCity.mp3" controls></audio>
+    <!-- Formatos aceitos: MP3, WAV e OGG -->
+     <h2>Outra Forma</h2>
+     <p>Paradise City - Guns N Roses</p>
+     <audio preload="metadata" controls loop>
+        <source src="../media/GunsNRoses-ParadiseCity.mp3" type="audio/mpeg">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. 
+            <a href="../media/GunsNRoses-ParadiseCity.mp3">
+                Clique aqui para baixar o arquivo</a>
+        </p>
+     </audio>
 </body>
 </html>
 
