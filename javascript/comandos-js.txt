@@ -1,0 +1,2 @@
+toFixed(2) - que é tipo um :2.f
+toLocaleString('PT-BR', {style: 'currency', currency: 'BRL'}) - Para colocar o tipo da moeda antes do valor

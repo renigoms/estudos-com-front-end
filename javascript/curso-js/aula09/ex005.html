@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(93, 158, 233);
+            color: white;
+            font: normal 1.2em Arial;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudos com Dom</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <div name="msg">Name</div>
+    <div class="msg">classe</div>
+    <script>
+        // //  Selecionando por marca (Tag name)
+        let p1 = window.document.getElementsByTagName('p')
+        document.write(p1[0].innerText+'<br>')
+        document.write(p1[1].innerHTML)
+        p1[0].style.color = 'yellow'
+        document.body.style.background = 'green'
+        // Selecionando elementos por ID(getElementsById())
+        let d = document.getElementById("msg")
+        d.style.background = 'black'
+        d.innerText = 'ola mundo'
+        // // Selecionar elemento por nome (getElementsByName)
+        let e = document.getElementsByName("msg")[0]
+        e.style.background = 'black'
+        // // Selecionar elementos por classe (getElementsByClasseName)
+        let f = document.getElementsByClassName("msg")[0]
+        f.style.background = 'black'
+
+        // Usando seletor a forma mais recomendada
+        // Toda div é representada por #
+        let seleted = document.querySelector('div#msg')
+        document.write(seleted.innerText)
+        // Toda classe é representada por .
+        let seleted2 = document.querySelector('div.msg')
+        document.write(seleted2.innerText)
+    </script>
+</body>
+</html>

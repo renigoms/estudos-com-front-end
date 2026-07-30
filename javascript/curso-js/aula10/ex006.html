@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+            font: normal 1.5em Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align:  center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        const div = document.getElementById('area')
+        div.addEventListener('click', clicar_in)
+        div.addEventListener('mouseenter', clicar_enter)
+        div.addEventListener('mouseout', clicar_out)
+        let count = 0
+        function clicar_in(){
+            count+=1
+            if (count > 1){
+                div.innerText='Interaja...'
+                count=0
+                return
+            } 
+            div.innerText='Clicou!'
+
+        }
+        function clicar_enter(){
+            div.style.background='red'
+        }
+        function clicar_out(){
+            div.style.background='green'
+        }
+    </script>
+</body>
+</html>

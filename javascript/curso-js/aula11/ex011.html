@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Onde você está ?</h1>
+    Vivendo em: <input type="text", id="txtpais">
+    <input type="button" value="verificar", onclick="verificarPais()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificarPais(){
+            var txtpais = window.document.getElementById('txtpais')
+            var res = window.document.getElementById('res')
+            var pais = txtpais.value
+            res.innerHTML= `<p> Você está em ${pais} </p>`
+            if (pais == 'Brasil'){
+                res.innerHTML+="<strong>Você é Brasileiro</strong>"
+            }else{
+                res.innerHTML+="<strong>Você é Estrangeiro</strong>"
+            }
+        }
+    </script>
+</body>
+</html>
